@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom table styles */
+.student-table-wrapper {
+  @apply relative;
+  min-height: 400px;
+}
+
+/* Custom loading animation */
+.loading-spinner {
+  @apply border-t-blue-500;
+  animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom input focus styles */
+.edit-input:focus {
+  @apply ring-2 ring-blue-500 border-blue-500;
+  outline: none;
+}
+
+/* Responsive padding adjustments */
+@media (max-width: 640px) {
+  .table-cell-padding {
+    @apply px-2 py-2;
+  }
+}

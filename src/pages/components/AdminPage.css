@@ -1,0 +1,257 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dashboard {
+  @apply min-h-screen bg-gray-100;
+}
+
+/* Header Styles */
+.header {
+  @apply bg-white shadow;
+}
+
+.header__container {
+  @apply flex items-center justify-between p-4;
+}
+
+.header__left {
+  @apply flex items-center;
+}
+
+.header__right {
+  @apply flex items-center space-x-4;
+}
+
+.mobile-menu-btn {
+  @apply lg:hidden p-2 text-gray-600 hover:text-gray-900;
+}
+
+.mobile-menu-btn .icon {
+  @apply h-6 w-6;
+}
+
+.brand {
+  @apply flex items-center space-x-2;
+}
+
+.brand__icon {
+  @apply h-8 w-8 text-blue-600;
+}
+
+.brand__text {
+  @apply text-xl font-bold text-gray-900;
+}
+
+.profile-btn {
+  @apply text-sm text-gray-700 hover:text-gray-900;
+}
+
+.logout-btn {
+  @apply flex items-center space-x-2 rounded-md bg-red-100 px-3 py-2 text-sm font-medium text-red-700 hover:bg-red-200;
+}
+
+.logout-btn .icon {
+  @apply h-4 w-4;
+}
+
+/* Dashboard Layout */
+.dashboard__body {
+  @apply flex;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  @apply fixed inset-y-0 left-0 w-64 transform bg-white shadow-lg transition-transform lg:relative lg:translate-x-0 -translate-x-full;
+}
+
+.sidebar--open {
+  @apply translate-x-0;
+}
+
+.sidebar__nav {
+  @apply mt-16 p-4 space-y-2;
+}
+
+.nav-item {
+  @apply flex w-full items-center space-x-2 rounded-md px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50;
+}
+
+.nav-item--active {
+  @apply bg-blue-100 text-blue-700;
+}
+
+.nav-item__icon {
+  @apply h-5 w-5;
+}
+
+/* Main Content */
+.main-content {
+  @apply flex-1 p-6;
+}
+
+/* Error Alert */
+.error-alert {
+  @apply mb-6 rounded-md bg-red-50 p-4;
+}
+
+.error-alert__content {
+  @apply flex;
+}
+
+.error-alert__icon-wrapper {
+  @apply flex-shrink-0;
+}
+
+.error-alert__icon {
+  @apply h-5 w-5 text-red-400;
+}
+
+.error-alert__text {
+  @apply ml-3;
+}
+
+.error-alert__title {
+  @apply text-sm font-medium text-red-800;
+}
+
+.error-alert__message {
+  @apply mt-2 text-sm text-red-700;
+}
+
+/* Stats Section */
+.stats {
+  @apply grid gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4;
+}
+
+.stats__card {
+  @apply bg-white rounded-lg shadow p-6;
+}
+
+.stats__content {
+  @apply flex items-center justify-between;
+}
+
+.stats__info {
+  @apply flex flex-col;
+}
+
+.stats__label {
+  @apply text-sm text-gray-600;
+}
+
+.stats__value {
+  @apply text-2xl font-semibold;
+}
+
+.stats__icon {
+  @apply h-8 w-8;
+}
+
+.stats__icon--blue {
+  @apply text-blue-600;
+}
+
+.stats__icon--green {
+  @apply text-green-600;
+}
+
+.stats__icon--purple {
+  @apply text-purple-600;
+}
+
+.stats__icon--orange {
+  @apply text-orange-600;
+}
+
+/* Section Styles */
+.section {
+  @apply bg-white rounded-lg shadow p-6;
+}
+
+.section__title {
+  @apply text-xl font-semibold mb-6;
+}
+
+.section__content {
+  @apply mt-4;
+}
+
+.welcome-message {
+  @apply text-gray-600;
+}
+
+/* Modal Styles */
+.modal {
+  @apply fixed inset-0 z-50 overflow-y-auto;
+}
+
+.modal__backdrop {
+  @apply fixed inset-0 bg-black bg-opacity-50;
+}
+
+.modal__container {
+  @apply fixed inset-0 z-50 overflow-y-auto flex min-h-screen items-end justify-center p-4 text-center sm:block sm:p-0;
+}
+
+.modal__content {
+  @apply relative inline-block transform overflow-hidden rounded-lg bg-white text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:align-middle;
+}
+
+.modal__header {
+  @apply bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4;
+}
+
+.modal__title {
+  @apply text-lg font-medium leading-6 text-gray-900;
+}
+
+.modal__body {
+  @apply mt-4 space-y-4;
+}
+
+.modal__footer {
+  @apply bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6;
+}
+
+.modal__close-btn {
+  @apply mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm;
+}
+
+/* Profile Field Styles */
+.profile-field {
+  @apply mt-4;
+}
+
+.profile-field__label {
+  @apply text-sm text-gray-500;
+}
+
+.profile-field__value {
+  @apply text-base capitalize;
+}
+
+/* Loading Screen */
+.loading-screen {
+  @apply flex h-screen items-center justify-center;
+}
+
+.loading-icon {
+  @apply h-8 w-8 animate-spin text-blue-600;
+}
+
+@media (min-width: 640px) {
+  .modal__container {
+    @apply p-0;
+  }
+  
+  .modal__content {
+    @apply my-8 max-w-lg;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    @apply ml-64;
+  }
+}
